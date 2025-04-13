@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.login-container,
+.dashboard-container,
+.data-container,
+.edit-container,
+.stats-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* .btn-edit {
+    background: #2196F3;
+} */
+.btn-edit {
+    background: #2196F3; /* Keep red background */
+    color: white;       /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 12px;  /* Add padding around text */
+    border-radius: 4px; /* Match your existing button style */
+    display: inline-block;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    border: none;       /* Remove default link border */
+    cursor: pointer;    /* Show pointer cursor */
+    font-size: 14px;    /* Match your button text size */
+}
+
+.btn-edit:hover {
+    background: #0b7dda; /* Slightly darker red on hover */
+    text-decoration: none; /* Ensure no underline appears on hover */
+}
+
+/* .btn-delete {
+    background: #f44336;
+} */
+.btn-delete {
+    background: #f44336; /* Keep red background */
+    color: white;       /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 12px;  /* Add padding around text */
+    border-radius: 4px; /* Match your existing button style */
+    display: inline-block;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    border: none;       /* Remove default link border */
+    cursor: pointer;    /* Show pointer cursor */
+    font-size: 14px;    /* Match your button text size */
+}
+
+.btn-delete:hover {
+    background: #d32f2f; /* Slightly darker red on hover */
+    text-decoration: none; /* Ensure no underline appears on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.graph {
+    margin: 20px 0;
+}
+
+/* first edit */
+.edit-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-container input,
+.edit-container textarea {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* second edit */
+/* Dropdown Styling */
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+
+/* adding dashboard option in view data page */
+/* Header Section Styles */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+.btn-dashboard {
+    background: #2196F3;
+}
+
+.btn-dashboard:hover {
+    background: #0b7dda;
+}
+
+/* Table Action Cells */
+.action-cells {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .action-buttons {
+        width: 100%;
+    }
+
+    .action-buttons a {
+        flex: 1;
+    }
+}
+
+.btn-logout {
+    background: #f44336;
+    /* Red color for logout */
+    margin-left: auto;
+    /* Pushes it to the right */
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-update, .btn-add {
+    background: #63a965;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-update:hover, .btn-add:hover {
+    background: #0aa710;
+}
+
+.btn-cancel {
+    background: #9E9E9E; /* Gray color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-cancel:hover {
+    background: #757575; /* Darker gray on hover */
+}
