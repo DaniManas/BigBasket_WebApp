@@ -12,6 +12,8 @@ app.secret_key = 'your_secret_key_here'
 
 DATABASE = 'instance/products.db'
 
+
+# Contribution by Krishna Desai - desaikri
 def init_db():
     conn = sqlite3.connect(DATABASE)
     c = conn.cursor()
@@ -50,6 +52,7 @@ init_db()
 # def login():
 #     return render_template('login.html')
 
+# Contribution by Manas Dani - madani
 @app.route('/', methods=['GET', 'POST'])  # Add POST method
 def login():
     if request.method == 'POST':
@@ -64,6 +67,7 @@ def login():
 #     session['logged_in'] = True
 #     return render_template('dashboard.html')
 
+# Contribution by Manas Dani - madani
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
     if not session.get('logged_in'):
@@ -124,7 +128,7 @@ def dashboard():
         graphs=preview_graphs  # passed to HTML
     )
 
-
+# Contribution by Krishna Desai - desaikri
 @app.route('/view_data')
 def view_data():
     if not session.get('logged_in'):
@@ -163,9 +167,9 @@ def view_data():
 
 
 
-from flask import Flask, render_template, request, redirect, url_for, session, flash  # make sure flash is imported
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 
-
+# Contribution by Krishna Desai - desaikri
 @app.route('/add', methods=['GET', 'POST'])
 def add_product():
     if not session.get('logged_in'):
@@ -199,7 +203,7 @@ def add_product():
     return render_template('add_data.html', brands=brands)
 
 
-
+# Contribution by Manas Dani - madani
 @app.route('/edit/<int:product_id>')
 def edit_form(product_id):
     conn = sqlite3.connect(DATABASE)
@@ -209,6 +213,7 @@ def edit_form(product_id):
     conn.close()
     return render_template('edit_data.html', product=product)
 
+# Contribution by Manas Dani - madani
 @app.route('/update/<int:product_id>', methods=['POST'])
 def update_product(product_id):
     conn = sqlite3.connect(DATABASE)
@@ -226,6 +231,7 @@ def update_product(product_id):
     conn.close()
     return redirect(url_for('view_data'))
 
+# Contribution by Krishna Desai - desaikri
 @app.route('/delete/<int:product_id>')
 def delete_product(product_id):
     conn = sqlite3.connect(DATABASE)
@@ -235,6 +241,7 @@ def delete_product(product_id):
     conn.close()
     return redirect(url_for('view_data'))
 
+# Contribution by Krishna Desai - desaikri
 @app.route('/stats')
 def stats():
     conn = sqlite3.connect(DATABASE)
@@ -282,9 +289,7 @@ def stats():
     return render_template('stats.html', graphs=graphs)
 
 
-
-
-
+# Contribution by Manas Dani - madani
 @app.route('/logout')
 def logout():
     # Clear the session

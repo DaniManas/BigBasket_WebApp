@@ -1,3 +1,4 @@
+//# Contribution by Krishna Desai - desaikri
 function togglePassword() {
   const passwordInput = document.getElementById('password');
   const toggleIcon = document.getElementById('toggleIcon');

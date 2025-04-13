@@ -1,3 +1,4 @@
+//# Contribution by Manas Dani - madani
 window.addEventListener("pageshow", () => {
   const btn = document.getElementById("loginBtn");
   const text = document.getElementById("btnText");
