@@ -304,11 +304,18 @@ def find_open_port(start=5000, max_tries=100):
                 return port
     raise OSError("No open ports found!")
 
-if __name__ == '__main__':
-    port = find_open_port()
-    print(f"🚀 Starting Flask app on http://127.0.0.1:{port}")
-    app.run(debug=True, port=port)
+# if __name__ == '__main__':
+#     port = find_open_port()
+#     print(f"🚀 Starting Flask app on http://127.0.0.1:{port}")
+#     app.run(debug=True, port=port)
+#
+#
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
+import os
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", find_open_port()))
+    print(f"🚀 Starting Flask app on http://0.0.0.0:{port}")
+    app.run(host="0.0.0.0", port=port, debug=True)
